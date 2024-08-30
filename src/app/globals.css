@@ -8,26 +8,28 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+.excel-grid {
+  border-collapse: collapse;
+  margin-top:  7rem;
+  /* overflow-x: hidden; */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.excel-grid td {
+  border: 1px solid #ccc;
+  padding: 0;
+  width: 40px; 
+  height: 30px; 
+  overflow-x: auto;
+  
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.cell-input {
+  /* width: 100%;
+  height: 100%; */
+  border: none;
+  text-align: center;
+  outline: none;
+  padding: 0;
+  box-sizing: border-box;
 }
